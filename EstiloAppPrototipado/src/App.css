@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  transition: 200ms;
+}
+
+html,
+body,
+:root {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.work-area,
+.canvas,
+.toolbox-area {
+  width: 100%;
+  height: 100%;
+}
+
+.canvas {
+  background-image: url("./assets/grid.svg");
+}
+
+.toolbox-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  .element {
+    color: black;
+    background-color: white;
+  }
+}
+
+.toolbox-light-magenta {
+  border: 2px solid #f00c76;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  background-color: #f8fafd;
+  color: #1f1f1f;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  margin: 16px 16px 8px;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  display: felx;
+  flex-direction: column;
+}
+
+.toolbox {
+  width: min-content;
+  min-width: 40px;
+  height: min-content;
+  min-height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.toolbox.col {
+  max-width: 64px;
+  padding: 8px 4px;
+}
+
+.toolbox.row {
+  max-height: 64px;
+  padding: 4px 8px;
+}
+
+#toolbox-display {
+  position: relative;
+  margin: 0 auto;
+}
+
+.toolbox-left {
+  position: relative;
+}
+
+.toolbox-left > .right-arrow {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 50px;
+  height: 100%;
+  background-color: aquamarine;
+  background-size: auto;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.right-arrow img {
+  width: 100px;
+  height: 100px;
+}
+
+.toolbox-left > .right-arrow {
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px outset #f00c76;
+  border-radius: 12%;
+  background-color: white;
+  color: #f00c76;
+  cursor: pointer;
+  transition:
+    background-color 400ms ease-in,
+    box-shadow 100ms ease-out;
+}
+
+.btn-icon:hover {
+  color: #fff;
+  background-color: #f00c76;
+  box-shadow: inset 0px 0px 24px #f00c76;
+}
